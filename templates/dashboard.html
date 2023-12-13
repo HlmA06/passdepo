@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hoşgeldiniz, {{ user.username }}!</h1>
+
+    <h2>Gönderi Oluştur</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.content.label }}
+            {{ form.content(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-success") }}
+        </div>
+    </form>
+
+    {% if posts %}
+        <h2>Gönderiler:</h2>
+        <ul class="list-group">
+            {% for post in posts %}
+                <li class="list-group-item">
+                    {{ post.content }}
+                    <form method="POST" action="{{ url_for('delete_post', post_id=post.id) }}" style="display: inline;">
+                        {{ form.hidden_tag() }}
+                        <button type="submit" class="btn btn-danger btn-sm float-right">Sil</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <p><a href="{{ url_for('logout') }}" class="btn btn-danger">Çıkış Yap</a></p>
+{% endblock %}
+
+{% block styles %}
+    <style>
+        body {
+            background-color: black;
+            color: darkgray;
+        }
+    </style>
+{% endblock %}

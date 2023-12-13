@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="jumbotron mt-5">
+    <h1 class="display-4">Passdepo Sayfasına Hoşgeldiniz!</h1>
+    <p class="lead">Bu site unutmak istemediğiniz şeyleri örneğin şifre vb. kaydetmenize yarar.</p>
+	<p class="lead">Hiçbir veri kaybı vb. durumu olmaz.</p>
+    <hr class="my-4">
+    <p>Site henüz geliştirme aşamasındadır!</p>
+	<p>İletişim için: y2229447@gmail.com</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Giriş Yapın</a>
+  </div>
+{% endblock %}

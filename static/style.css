@@ -1,0 +1,44 @@
+/* static/style.css */
+
+body {
+    background-color: black;
+    color: darkgray; /* Metin rengi beyaz */
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar a {
+    color: white !important; /* Menü linklerinin rengi beyaz */
+}
+
+.navbar a:hover {
+    color: yellow !important; /* Hover durumunda link rengi sarı */
+}
+
+#messages_label {
+    background-color: black;
+    color: white;
+}
+
+#messages_label a {
+    color: limegreen !important; /* Gönderi linklerinin rengi lime yeşili */
+}
+
+#messages_label a:hover {
+    color: yellowgreen !important; /* Hover durumunda gönderi link rengi sarı yeşil */
+}
+
+#messages_label a:visited {
+    color: purple !important; /* Ziyaret edilmiş gönderi linklerinin rengi mor */
+}
+
+.btn {
+    background-color: #007bff; /* Standart düğme rengi mavi */
+    color: white;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Hover durumunda düğme rengi koyu mavi */
+}
